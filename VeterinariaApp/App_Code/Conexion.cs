@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.OleDb;
 using System.Web;
+using VeterinariaApp;
 
 namespace mis_conexiones
 {
@@ -68,6 +69,34 @@ namespace mis_conexiones
                 conexion.Close();
             }
             return dt;
+        }
+
+        public string insertarMascota(Mascota mascota)
+        {
+            string CadenaConexion = this.crear_string_conexion_access();
+
+            OleDbConnection connection = new OleDbConnection(CadenaConexion);
+            OleDbDataAdapter oledbAdapter = new OleDbDataAdapter();
+            // Se obtienen datos desde archivo de texto             
+            string strSQL = "INSERT INTO  mascota ([Nombre mascota], [Nombre propietario], [edad])";
+            strSQL += "values ('" + mascota.Nombre + "', '" + mascota.Propietario + "', '" + mascota.Edad + "')";
+
+            try
+            {
+                connection.Open();
+                oledbAdapter.InsertCommand = connection.CreateCommand();
+                oledbAdapter.InsertCommand.CommandText = strSQL;
+                oledbAdapter.InsertCommand.ExecuteNonQuery();
+                return "Se han registrado los datos";
+            }
+            catch (Exception e)
+            {
+                return "No se han podido registrar los datos: " + e.ToString();
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
     }
 

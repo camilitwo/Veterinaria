@@ -3,8 +3,11 @@ using mis_conexiones;
 
 namespace VeterinariaApp
 {
+    
+
     public class VeterinariaPadre
     {
+        Conexiones conn = new Conexiones();
         private int _cantidad_veterinaios;
         private string _fecha_inauguracion;
         private int _num_salas;
@@ -12,9 +15,9 @@ namespace VeterinariaApp
         //metodos
         
 
-        public void registrarMascota()
+        public string registrarMascota(Mascota mascota)
         {
-
+            return conn.insertarMascota(mascota);
         }
         public void registrarPropietario()
         {
@@ -34,6 +37,52 @@ namespace VeterinariaApp
         public DataTable verListaPropietarios()
         {
             return conn.LeeBBDDAccess("propietario"); ;
+        }
+    }
+
+    public class Mascota
+    {
+        private string _nombre;
+        private string _propietario;
+        private int _edad;
+
+        public string Nombre
+        {
+            get
+            {
+                return _nombre;
+            }
+
+            set
+            {
+                _nombre = value;
+            }
+        }
+
+        public string Propietario
+        {
+            get
+            {
+                return _propietario;
+            }
+
+            set
+            {
+                _propietario = value;
+            }
+        }
+
+        public int Edad
+        {
+            get
+            {
+                return _edad;
+            }
+
+            set
+            {
+                _edad = value;
+            }
         }
     }
 }
