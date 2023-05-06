@@ -8,7 +8,6 @@ namespace VeterinariaApp
     public partial class VerMascota : System.Web.UI.Page
     {
         Conexiones conn = new Conexiones();
-        Data data = new Data();
         protected void Page_Load(object sender, EventArgs e)
         {
             Gv_mascotas.Visible = false;
@@ -37,6 +36,11 @@ namespace VeterinariaApp
             }
 
             Gv_mascotas.Visible = true;
+        }
+
+        protected void Btn_registrar_nueva_mascota_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AgregarMascota.aspx");
         }
     }
 }

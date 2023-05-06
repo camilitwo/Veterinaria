@@ -24,7 +24,7 @@
             <asp:Button ID="Btn_mostar_mascotas" runat="server" OnClick="Btn_mostar_mascotas_Click" Text="Mostrar Mascotas" />
         </p>
         <p style="text-align: center">
-            <asp:Button ID="Btn_registrar_nueva_mascota" runat="server" Text="Registrar nueva mascota" />
+            <asp:Button ID="Btn_registrar_nueva_mascota" runat="server" Text="Registrar nueva mascota" OnClick="Btn_registrar_nueva_mascota_Click" />
         </p>
         <p style="text-align: center">
             <table style="width: 100%;">

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="VeterinariaApp.VeterinariaPadre">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAgAAAAAAAAAEAAAAIAAAAAAAAACAAAAA=</HashCode>
+      <FileName>App_Code\Veterinaria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VeterinariaApp.VeterinariaHijo">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAQAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>App_Code\Veterinaria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

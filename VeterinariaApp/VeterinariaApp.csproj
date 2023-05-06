@@ -53,6 +53,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AgregarMascota.aspx" />
     <Content Include="App_Data\veterinaria.mdb" />
     <Content Include="Index.aspx" />
     <Content Include="SitioVeterinario.aspx" />
@@ -60,7 +61,14 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexion.cs" />
+    <Compile Include="AgregarMascota.aspx.cs">
+      <DependentUpon>AgregarMascota.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarMascota.aspx.designer.cs">
+      <DependentUpon>AgregarMascota.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\Conexion.cs" />
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -83,8 +91,10 @@
     <Compile Include="VerMascota.aspx.designer.cs">
       <DependentUpon>VerMascota.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Code\Veterinaria.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -92,9 +102,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Code\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
